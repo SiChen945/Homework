@@ -1,0 +1,38 @@
+---
+title: "R Homework 2"
+author: "Si Chen"
+date: "9/6/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: inline
+---
+```{r}
+library(matlib)
+```
+```{r}
+#2(a)
+a <- matrix(c(2, 1, 5, 3), 2, 2)
+b <- c(33,19)
+showEqn(a,b)
+```
+```{r}
+solve(a,b)
+```
+x=4,y=5
+```{r}
+# 2(b)
+C<-c(1:100)
+C
+```
+```{r}
+Average=sum(C)/100
+Average
+```
+
+```{r}
+#3
+row1<-c("A","B","C","D")
+row2<-c("D","E","F","G")
+g<-rbind(row1,row2)
+g
+```
