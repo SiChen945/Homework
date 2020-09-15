@@ -1,0 +1,45 @@
+---
+title: "Homework 3"
+author: "Si Chen"
+date: "9/13/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#1
+Mean_function <- function(X){
+  M <- sum(X)/length(X);
+  return(M)
+}
+```
+
+```{r}
+library(data.table)
+data1<- fread("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-01/key_crop_yields.csv")
+```
+
+```{r}
+#2
+Year= data1$Year
+max(Year)
+min(Year)
+range= max(Year) - min(Year)
+range
+```
+# The range of the variable Year is 57
+```{r}
+#3
+library(na.tools)
+maizedata= na.rm(data1$Maize)
+Mean_function(maizedata)
+```
+# The mean of the vairable Maize is 3.024496
+```{r}
+#4
+fwrite(data1, file="Entity.txt")
+```
+
